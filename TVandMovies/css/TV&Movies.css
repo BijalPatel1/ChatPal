@@ -1,0 +1,19 @@
+#tm
+{
+	font-family: 'Kotta One';
+	font-size: 40px;
+}
+.pic img
+{
+	width: 300px;
+	height: 300px;
+	margin-top: 10px;
+	border-radius: 10px;
+	margin-left: 10px;
+	transition: 1s;
+}
+
+.pic img:hover
+{
+	transform: scale(1.1);
+}

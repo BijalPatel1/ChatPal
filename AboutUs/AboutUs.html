@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+	<link href='https://fonts.googleapis.com/css?family=Kotta One' rel='stylesheet'>
+	<link type="image/jpg" rel="shortcut icon" href="fav.jpg">
+	<style type="text/css">
+	body
+	{
+		background-color: #3498DB;
+		font-family: 'Kotta One';
+	}
+
+	.path 
+	{
+	  position: relative;
+	  overflow: hidden;
+	  width: 100%;
+	  height: 379px;
+	  margin: auto;
+	}
+	
+	.Img 
+	{
+	  position: absolute;
+	  left: 0;
+	  display: block;
+	  top: 0;
+	  
+	  x-transition: all 1s ease-in-out;
+	  animation: ani 20s infinite;
+	}
+
+
+	@keyframes ani
+	{
+	  0% 
+	  {
+	    left: 0;
+	  }
+	  
+	  50% 
+	  {
+	    left: 720px;
+	  }
+	  
+	  100% 
+	  {
+	    left: 0;
+	  }
+	}
+
+	#abt
+	{
+	  font-size: 40px;
+	  font-weight: bold;
+	  font-family: 'Kotta One';
+	  color: #fff;
+	}
+
+	table
+	{
+		font-size: 25px;
+	  	font-family: 'Kotta One';
+	  	color: #fff;
+	}
+
+	#desc
+	{
+		font-size: 30px;
+	  	font-family: 'Kotta One';
+	  	color: #fff;
+	}
+
+	#bijal
+	{
+		border-radius: 5px;
+		border: 10px solid #fff;
+		width: 45%;
+	}
+
+	#sai
+	{
+		position: absolute;
+		float: right;
+		border-radius: 5px;
+		border: 10px solid #fff;
+		top: 97.3%;
+		left: 50%;
+		width: 45%;
+	}
+
+	#bij
+	{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 33.5%;
+		top: 100%;
+		border-radius: 10px;
+	}
+
+	#saiPic
+	{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 73%;
+		top: 6%;
+		border-radius: 10px;
+	}
+</style>
+</head>
+<body>
+	<center><p id="abt">ABOUT US</p></center>
+	<div class="container">
+ 	<div class="path">
+    <img src="au.png" class="Img"> 
+  	</div>
+	</div>
+
+	
+	<center><p id="desc">Our Chatpal website allows user's to interact with each other , and it also helps you to connect with your friends and family from any location.</p></center>
+
+	<div id="bijal">
+	<p><table cellspacing="10px">
+		<tr><td>Name </td><td>: XYZ</td></tr>
+		<tr><td>Email </td><td>: xyz@gmail.com</td></tr>
+		<tr><td>Phone no. :</td><td> 12343567</td></tr>
+		<td rowspan="3"><img src="xyz.png" width="400" height="400" id="x"></td>
+	</table></p>
+	</div>
+	
+
+	<div id="sai">
+	<p><table cellspacing="10px">
+		<tr><td>Name </td><td>: ABC</td></tr>
+		<tr><td>Email </td><td>: abc@gmail.com</td></tr>
+		<tr><td>Phone no. :</td><td> 456789432</td></tr>
+		<td rowspan="3"><img src="abc.png" width="400" height="400" id="a"></td>
+	</table></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.container
+{
+	/* Section element is placed to its normal position */
+	position: relative;
+}
+
+#Login_username
+{
+	/* Input type Text for Username is placed according to the Section element */
+	position: absolute;
+	top: 28.5%;
+	left: 25.5%;
+}
+
+#Login_password
+{
+		/* Input type Password for Password is placed according to the Section element */
+	position: absolute;
+	top: 39.5%;
+	left: 25.5%;
+}
+
+#sub1
+{
+	/* Button to check values from database and navigate to next page */
+	position: absolute;
+	top: 46%;
+	left: 25.5%;
+	width: 6%;
+	height: 25px;
+	background-color: #ffd025;
+	border-color: #ffd025;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+#Signup_username
+{
+	/* Input type Text for Username is placed according to the Section element */
+	position: absolute;
+	bottom: 33%;
+	left: 25.5%;
+}
+
+#Signup_password
+{
+	/* Input type Password for Password is placed according to the Section element */
+	position: absolute;
+	bottom: 23.5%;
+	left: 25.5%;
+}
+
+#sub2
+{
+	/* Button to insert values in database */
+	position: absolute;
+	bottom: 17%;
+	left: 28%;
+	width: 8%;
+	height: 25px;
+	background-color: #ffd025;
+	border-color: #ffd025;
+	border-radius: 10px;
+	font-weight: bold;
+
+}

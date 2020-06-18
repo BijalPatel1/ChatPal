@@ -1,0 +1,224 @@
+body 
+{
+    font-family: 'Alegreya SC';
+    transition: background-color .5s;
+}
+
+.sidenav 
+{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;    
+}
+
+.sidenav a 
+{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.sidenav .closebtn 
+{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main
+{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#search
+{
+    position:absolute;
+    float:right;
+	margin-left:15px;
+    margin-top:-14px;
+	width: 65%;
+	height: 30px;
+	border-radius: 10px;
+	border: solid 2px #000000;
+	background-image: url("search.png");
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	padding-left: 35px;
+	font-size: 20px;
+	font-family: 'Alegreya SC';
+}
+
+#btn
+{
+    position:absolute;
+	margin-left: 69.5%;
+    margin-top:-14px;
+	float:right;
+	width: 10%;
+	height: 35px;
+	border-radius: 10px;
+	border: solid 2px;
+	background-color: #ffd025;
+	border-color: #ffd025;
+	font-size: 20px;
+	color: #000000;
+	font-weight: bold;
+	font-family: 'Alegreya SC';
+}
+
+#chat
+{
+	position:absolute;
+	width: 65px;
+	height: 65px;
+	margin-top: -30px;
+	margin-left: 80%;
+}
+        
+span
+{
+    float:left;
+    margin-left:40px;
+}
+
+.sidenav ul li
+{
+	list-style: none;
+	font-style: italic;
+	color: #ffffff;
+	font-size: 20px;
+	margin-top: 15px;
+}
+
+#quiz,#game,#aboutUs,#setting,#logout
+{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+}
+
+#profile
+{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 10px;
+}
+
+#pro
+{
+	position: absolute;
+	top:33%;
+	left: 30px;
+	width: 60%;
+	height: 40px;
+	font-family: 'Alegreya SC';
+	font-size: 20px;
+	background-color: #ffd025;
+	color: #000000;
+	border-radius: 10px;
+	border-color: #000000;
+}
+
+#quiz
+{
+	position: absolute;
+	left: 10px;
+	top : 40%;
+}
+
+#qz
+{
+	position: absolute;
+	top : 40%;
+}
+
+
+#game
+{
+	position: absolute;
+	left: 10px;
+	top : 50%;
+}
+
+#gm
+{
+	position: absolute;
+	top : 50%;
+}
+
+#setting
+{
+	position: absolute;
+	left: 10px;
+	top : 60%;
+}
+
+#set
+{
+	position: absolute;
+	top : 60%;
+}
+
+#aboutUs
+{
+	position: absolute;
+	left: 10px;
+	top : 70%;
+}
+
+#au
+{
+	position: absolute;
+	top : 70%;
+}
+
+#logout
+{
+	position: absolute;
+	left: 10px;
+	top : 80%;
+}
+
+#log
+{
+	position: absolute;
+	top : 80%;
+}
+
+.octagonImg img
+{
+	width: 163px;
+	height: 130px;
+	border-radius: 10px;
+	border:5px solid #000000;
+}
+
+.pic img
+{
+	width: 300px;
+	height: 300px;
+	margin-top: 10px;
+	border-radius: 10px;
+	margin-left: 10px;
+	transition: 1s;
+}
+
+.pic img:hover
+{
+	transform: scale(1.1);
+}

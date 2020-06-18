@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title> GK Quiz</title>
+<link type="image/jpg" rel="shortcut icon" href="fav.jpg">
+<style>
+     #test_status
+    {
+      font-family: 'Kotta One';
+      font-size:25px;
+      color:#FFF;
+    }
+    body
+    {
+    background-image: url('bg.jpg'); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Kotta One';
+    }
+    #b1
+    {
+    position: absolute;
+    top: 47%;
+    left: 42%;
+    width: 14%;
+    height:45px;
+    background-color: #000;
+    border-color: #000;
+    border-radius: 5px;
+    font-family: 'Kotta One';
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    }
+    div#test
+    {
+    padding:10px 40px 40px 40px; 
+    width:50%; 
+    height:100%;
+    font-family: 'Kotta One';
+    font-size:21px;
+    color:#FFF;
+    }
+</style>
+<script type="text/javascript">
+// pos is position of where the user in the test or which question they're up to
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+// this is a multidimensional array with 5 inner array elements with 10 elements inside them
+var questions = [
+  ["In which year of First World War Germany declared war on Russia and France:", "1914", "1915", "1916","1917", "A"],
+  ["ICAO stands for:","International Civil Aviation Organization", "Indian Corporation of Agriculture Organization", "Institute of Company of Accounts Organization","None of the above", "A"],
+  ["India's first Technicolor film ____ in the early 1950s was produced by ____","'Jhansi Ki Rani', Sohrab Modi","'Jhansi Ki Rani', Sir Syed Ahmed", "'Mirza Ghalib', Sohrab Modi", "'Mirza Ghalib', Munshi Premchand","A"],
+  ["India has largest deposits of ____ in the world.", "gold", "copper","mica","None of the above","C"],
+  ["India's first satellite is named after:","Aryabhatta","Bhaskara II","Bhaskara I","Albert Einstein","A"],
+  ["India's first atomic reactor was:","Zerlina","Dhruva","Apsara","Kamini","C"],
+  ["In which year, terrorists crash two planes into New York's World Trade Centre on September 11 in a sequence of destruction:","2000","2001","2002","2003","B"],
+  ["India's first ocean wave's energy project was launched in:","1981","1991","1995","2000","B"],
+  ["India's tallest stone statue of the Jain sage Gomateswara is at:","Mysore, Karnakata","New Delhi","Sravanabelagola, Karnataka","Mandu, Madhya Pradesh","C"],
+  ["In a normal human body, the total number of red blood cells is:","15 trillion","20 trillion","25 trillion","30 trillion","D"]
+  ];
+// this get function is short for the getElementById function  
+function get(x){
+  return document.getElementById(x);
+}
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    // resets the variable to allow users to restart the test
+    pos = 0;
+    correct = 0;
+    // stops rest of renderQuestion function running when test is completed
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  question = questions[pos][0];
+  chA = questions[pos][1];
+  chB = questions[pos][2];
+  chC = questions[pos][3];
+  chD = questions[pos][4];
+  test.innerHTML = "<h3>"+question+"</h3>";
+  // the += appends to the data we started on the line above
+  test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()' id='b1'>Submit Answer</button>";
+}
+function checkAnswer(){
+  // use getElementsByName because we have an array which it will loop through
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+  // checks if answer matches the correct choice
+  if(choice == questions[pos][5]){
+    //each time there is a correct answer this value increases
+    correct++;
+  }
+  // changes position of which character user is on
+  pos++;
+  // then the renderQuestion function runs again to go to next question
+  renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body>
+<center><h2 id="test_status"></h2></center>
+<center><div id="test"></div></center>
+</body>
+</html>
